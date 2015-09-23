@@ -2,16 +2,18 @@ module Main (
     main
 )   where
 
+import ClassyPrelude
 import Network.Wai (responseLBS, Application)
 import Network.Wai.Handler.Warp (run)
 import Network.HTTP.Types (status200)
 import Network.HTTP.Types.Header (hContentType)
 
 main = do
-    let port = 3000
-    putStrLn $ "Listening on port " ++ show port
-    run port app
+    (port :: Int, filepath :: FilePath) <- readArgs
+    putStrLn $ "Listening on port " ++ tshow port
+    filecontents <- readFile filepath
+    run port $ app filecontents
 
-app :: Application
-app req f =
-    f $ responseLBS status200 [(hContentType, "text/plain")] "Hello world!"
+app :: LByteString -> Application
+app filecontents req f =
+    f $ responseLBS status200 [(hContentType, "text/html")] filecontents

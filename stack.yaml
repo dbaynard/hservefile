@@ -1,5 +1,9 @@
 flags: {}
 packages:
 - '.'
-extra-deps: []
+extra-deps:
+- ReadArgs-1.2.2
+- basic-prelude-0.5.0
+- classy-prelude-0.12.3
+- mutable-containers-0.3.2
 resolver: ghc-7.10
