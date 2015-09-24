@@ -2,7 +2,7 @@
 -- documentation, see http://haskell.org/cabal/users-guide/
 
 -- The name of the package.
-name:                hserve
+name:                hservefile
 
 -- The package version.  See the Haskell package versioning policy (PVP) 
 -- for standards guiding when and how versions should be incremented.
@@ -10,7 +10,7 @@ name:                hserve
 -- PVP summary:      +-+------- breaking API changes
 --                   | | +----- non-breaking API additions
 --                   | | | +--- code changes with no API change
-version:             0.1.0.0
+version:             0.1.0.1
 
 -- A short (one-line) description of the package.
 synopsis:            Simple standalone local web server
@@ -19,7 +19,7 @@ synopsis:            Simple standalone local web server
 -- description:         
 
 -- URL for the project homepage or repository.
-homepage:            https://github.com/hserve
+homepage:            https://github.com/dbaynard/hservefile
 
 -- The license under which the package is released.
 license:             Apache-2.0
@@ -49,7 +49,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 
-executable hserve
+executable hservefile
   -- .hs or .lhs file containing the Main module.
   main-is:             Main.hs
   
